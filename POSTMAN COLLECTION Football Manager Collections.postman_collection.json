@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "03ff4a47-5205-44e3-8850-8c4b2447b80b",
+		"name": "Football Manager Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39827173"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players"
+					]
+				},
+				"description": "Get all players from DB"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/players",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Artem\",\n    \"lastName\": \"Lebid\",\n    \"position\": \"Forward\",\n    \"age\": 21,\n    \"experience\": 60,\n    \"teamId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players"
+					]
+				},
+				"description": "Add new player to DB"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/players/{playerId}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/players/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"15"
+					]
+				},
+				"description": "Get player by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/players/{playerId}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Artem\",\n    \"lastName\": \"Lebid\",\n    \"position\": \"Goalkeeper\",\n    \"age\": 21,\n    \"experience\": 60,\n    \"teamId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/players/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"10"
+					]
+				},
+				"description": "Update player by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/players/{playerId}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"10"
+					]
+				},
+				"description": "Delete player by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teams",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams"
+					]
+				},
+				"description": "Get all teams from DB"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"NewTeamName\",\n  \"country\": \"Ukraine\",\n  \"balance\": 150000000.0,\n  \"commissionRate\": 4\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams"
+					]
+				},
+				"description": "Add new team into DB"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/{teamId}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"2"
+					]
+				},
+				"description": "Get info about team by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/{teamId}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"NewTeamName\",\n  \"country\": \"England\",\n  \"balance\": 150000000.0,\n  \"commissionRate\": 4\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"1"
+					]
+				},
+				"description": "Update team by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/{teamId}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teams/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"9"
+					]
+				},
+				"description": "Delete team by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/{teamId}/players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams/1/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"1",
+						"players"
+					]
+				},
+				"description": "Get all players related to team by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/{teamId}/players",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerIds\": [103, 104, 105]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams/1/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"1",
+						"players"
+					]
+				},
+				"description": "Add new players to team by id. Body is array of index new players for team. They will added to current players"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/teams/1/players",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerIds\": [103, 100, 105]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teams/1/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams",
+						"1",
+						"players"
+					]
+				},
+				"description": "Update players in team by id. Body is array of index players for team that shoud be present in team. After patch team will have only players that contains in \"playersIds\""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/transfers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerId\": 17,\n    \"fromTeamId\": 2,    \n    \"toTeamId\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/transfers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfers"
+					]
+				},
+				"description": "Make a transfer between teams."
+			},
+			"response": []
+		}
+	]
+}
